@@ -23,19 +23,20 @@ Simple 2D Game made with LÖVE2D where you control a panda that shoots bullets a
 - **Spacebar**: Shoot bullet
 
 ## Project Structure 📁
+```text
 game-directory/
 ├── main.lua          # Game entry point, callbacks and edge detection
 ├── classes/
-│   ├── player.lua       # Player class with movement and shooting
-│   ├── enemy.lua        # Enemy class with bouncing AI
-│   └──bullet.lua        # Bullet class
+│   ├── player.lua    # Player class with movement and shooting
+│   ├── enemy.lua     # Enemy class with bouncing AI
+│   └── bullet.lua    # Bullet class
 ├── lib/
 │   └── classic.lua   # Class library for OOP in Lua
 └── media/
     ├── panda.png     # Player sprite
     ├── snake.png     # Enemy sprite
     └── bullet.png    # Bullet sprite
-
+```
 ## Credits 📚
 - **Assets**: [Kenney.nl](https://kenney.nl/) for the free game assets
 - **Tutorial**: Based on "Shoot the Enemy" game tutorial on [SheepSolution](https://www.sheepolution.com/learn/book/14)

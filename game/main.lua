@@ -13,9 +13,9 @@ function love.update(dt)
 
     for i, v in ipairs(listOfBullets) do
         v:update(dt)
+        v:checkCollision(enemy)
 
-        if (v.y + v.height >= enemy.y) and (v.x > enemy.x and v.x < enemy.x + enemy.width) then
-            enemy.speed = enemy.speed + 15
+        if v.dead then
             table.remove(listOfBullets, i)
         end
     end

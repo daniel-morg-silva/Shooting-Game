@@ -1,6 +1,8 @@
 local Object = require "lib/classic"
 local Enemy = Object:extend()
 local direction = true
+local window_width = love.graphics.getWidth()
+local window_height = love.graphics.getHeight()
 
 function Enemy:new()
     self.image = love.graphics.newImage("media/snake.png")
@@ -8,14 +10,14 @@ function Enemy:new()
     self.width = self.image:getWidth()
     self.height = self.image:getHeight()
 
-    self.x = 325
-    self.y = 450
+    self.x = window_width / 2
+    self.y = window_height - self.height - 100
 
     self.speed = 100
 end
 
 function Enemy:update(dt)
-    local window_width = love.graphics.getWidth()
+    
 
     if self.x < 0 then
         direction = true

@@ -6,18 +6,18 @@ function Bullet:new(x, y)
 
     self.x = x
     self.y = y
-    self.speed = 700
+    self.speed = 1000
 
     self.width = self.image:getWidth()
     self.height = self.image:getHeight()
 end
 
 function Bullet:update(dt)
-    local window_width = love.graphics.getWidth()
+    local window_height = love.graphics.getHeight()
 
     self.y = self.y + self.speed * dt
 
-    if self.y > window_width then
+    if self.y > window_height then
         love.load()
     end
 end
